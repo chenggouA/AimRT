@@ -76,3 +76,6 @@ if(AIMRT_BUILD_TOPIC_LOGGER_PLUGIN
    AND AIMRT_BUILD_ECHO_PLUGIN)
   add_subdirectory(topic_logger_plugin)
 endif()
+
+# LogCore plugin example - only requires runtime
+add_subdirectory(logcore_plugin)

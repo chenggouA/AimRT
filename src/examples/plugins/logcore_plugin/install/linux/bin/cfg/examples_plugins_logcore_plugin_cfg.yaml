@@ -1,0 +1,32 @@
+aimrt:
+  plugin:
+    plugins:
+      - name: logcore_plugin
+        path: ./libaimrt_logcore_plugin.so
+
+  log:
+    core_lvl: DEBUG  # Allow all log levels from modules
+    backends:
+      - type: console
+        options:
+          color: true
+      # Backend 1: Full log (DEBUG and above)
+      - type: logcore_file
+        options:
+          path: ./log
+          filename: full.log
+          min_level: DEBUG
+        rotation:
+          type: daily
+          keep_days: 30
+
+      # Backend 2: Info log (INFO and above)
+      - type: logcore_file
+        options:
+          path: ./log
+          filename: info.log
+          min_level: INFO
+          rotation:
+            type: size      # none/daily/size
+            max_size: 10 KB # B/KB/MB 
+            max_files: 10

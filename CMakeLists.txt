@@ -53,6 +53,7 @@ cmake_dependent_option(AIMRT_BUILD_LOG_CONTROL_PLUGIN "AimRT build log control p
 cmake_dependent_option(AIMRT_BUILD_TOPIC_LOGGER_PLUGIN "AimRT build topic logger plugin." OFF "AIMRT_BUILD_RUNTIME;AIMRT_BUILD_WITH_PROTOBUF" OFF)
 cmake_dependent_option(AIMRT_BUILD_GRPC_PLUGIN "AimRT build grpc plugin." OFF "AIMRT_BUILD_RUNTIME" OFF)
 cmake_dependent_option(AIMRT_BUILD_PROXY_PLUGIN "AimRT build proxy plugin." OFF "AIMRT_BUILD_RUNTIME" OFF)
+cmake_dependent_option(AIMRT_BUILD_LOGCORE_PLUGIN "AimRT build logcore plugin." OFF "AIMRT_BUILD_RUNTIME" OFF)
 
 option(AIMRT_EXECUTOR_USE_STDEXEC "AimRT use stdexec as executor impl. (Experimental)" OFF)
 
